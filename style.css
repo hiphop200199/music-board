@@ -1,0 +1,32 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+#container {
+  position: relative;
+  background-image: linear-gradient(25deg, rgb(228, 241, 252), rgb(131, 226, 250));
+  min-height: 100vh;
+  overflow: hidden;
+}
+#container #canvas {
+  position: absolute;
+  filter: contrast(105%) brightness(105%) saturate(105%);
+}
+#container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  animation: move 60s linear alternate infinite;
+}
+
+@keyframes move {
+  0%, 100% {
+    left: 0;
+  }
+  50% {
+    left: -3000px;
+  }
+}/*# sourceMappingURL=style.css.map */
