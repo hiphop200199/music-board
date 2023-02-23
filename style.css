@@ -21,12 +21,45 @@
   height: 100%;
   animation: move 60s linear alternate infinite;
 }
+#container #bgm {
+  position: absolute;
+  font-size: 5vw;
+  color: rgb(255, 195, 172);
+  border: none;
+  background: none;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
+  cursor: pointer;
+  left: 2vw;
+  top: 1vh;
+  filter: brightness(105%) drop-shadow(1px -1px 5px rgb(255, 195, 172));
+  animation: shine 3s linear alternate infinite, rot 6s linear alternate infinite;
+  z-index: 1;
+}
 
+@keyframes rot {
+  0% {
+    transform: rotate(-2deg);
+  }
+  50% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(3deg);
+  }
+}
 @keyframes move {
   0%, 100% {
     left: 0;
   }
   50% {
     left: -3000px;
+  }
+}
+@keyframes shine {
+  to {
+    filter: brightness(108%) drop-shadow(1px -1px 1px rgb(121, 255, 244));
+    scale: 1.01;
   }
 }/*# sourceMappingURL=style.css.map */

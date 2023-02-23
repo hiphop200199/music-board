@@ -9,11 +9,13 @@ window.addEventListener("load", function () {
     const A=new Audio("A.wav");
     BGM.volume=0.1;
     BGM.loop=true;
-    BGM.play();
+   
     const canvas = document.getElementById("canvas");
     const context = canvas.getContext("2d");
+    const bgmBtn=document.getElementById("bgm");
     canvas.width = window.innerWidth;
     canvas.height = window.innerHeight;
+    
     window.addEventListener("resize", () => {
       canvas.width = window.innerWidth;
       canvas.height = window.innerHeight;
@@ -78,6 +80,13 @@ window.addEventListener("load", function () {
         B.play();
       }
     });
+    bgmBtn.addEventListener("click",function(){
+        if(BGM.paused){
+            BGM.play();
+        }else{
+            BGM.pause();
+        }
+    })
     class Particle {
       constructor() {
         this.textString = "♩♪♫♬♯♭♮";
